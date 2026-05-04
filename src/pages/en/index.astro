@@ -10,12 +10,16 @@ const lang = 'en' as const;
     <header class="masthead">
       <div class="masthead__inner">
         <div class="masthead__brand">
-          <span class="kicker">{t(lang, 'meta.issue')} · May 2026</span>
+          <span class="kicker">{t(lang, 'meta.issue')} · {t(lang, 'meta.date')}</span>
           <h1 class="display display--mega">{t(lang, 'site.title')}</h1>
+          <p class="masthead__sub">汪星宇</p>
         </div>
         <nav class="masthead__nav">
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
+          <a href="#fronts">Fronts</a>
+          <a href="#soul">Soul</a>
+          <a href="#stance">Stance</a>
+          <a href="#pantheon">Pantheon</a>
           <a href="#contact">Contact</a>
           <a href="/" class="masthead__lang">中文</a>
         </nav>
@@ -26,9 +30,15 @@ const lang = 'en' as const;
 
     <section class="cover">
       <span class="kicker">Cover · This Issue</span>
-      <h2 class="display">A window between making things<br />and talking about them.</h2>
-      <p class="dek">A still-in-edit personal periodical — part portfolio, part room for the unfinished.</p>
-      <p class="byline">Editor · Wang Xingyu / Set in Astro / Type · Source Serif &amp; Noto Serif SC</p>
+      <h2 class="display">Having seen the vastness<br />of heaven and earth,<br />still tender toward each green blade.</h2>
+      <p class="dek">
+        Nine years on the frontline of rural revitalization in China.
+        AI explorer. Social-science researcher in the making.
+        AI in one hand, the countryside in the other — running a "super one-person company."
+      </p>
+      <p class="byline">
+        Editor · Will Wang / Set in Astro / Type · Source Serif &amp; Noto Serif SC
+      </p>
     </section>
 
     <hr class="rule" />
@@ -38,17 +48,199 @@ const lang = 'en' as const;
       <h3>Editor's note</h3>
       <div class="prose dropcap">
         <p>
-          This isn't a résumé and it isn't strictly a portfolio. Design, product, business,
-          and the curiosity of someone still in school all run at once — so the site has
-          space for finished projects and for ideas that haven't taken shape yet.
-          Think of it as a small magazine on an irregular publication schedule;
-          you'll know when a new issue is out.
+          The first time I walked into the mountains of western Hunan in 2017,
+          I didn't know I'd still be on that road nine years later.
+          From a political-science classroom in New York to a fire pit in a Miao village,
+          from <em>Rural Notes</em> to <em>Hills &amp; Seas Youth</em>,
+          the work has been concrete and clumsy: make space for kids in the mountains
+          to sit down and read, give kids in the city a reason to step into real countryside.
         </p>
         <p>
-          Visually it leans paper, serif, and old-school reading. Less SaaS chill,
-          more newsroom warmth. No dark mode — magazines don't have one.
+          From 2026 on, I'm reshaping myself into a "super one-person company."
+          One hand uses AI as an amplifier, pushing what one person can produce past the threshold of an organization.
+          The other keeps doing the rural work — cultural tourism, education nonprofits, industry incubation.
+          The two fronts aren't a split. They're a feedback loop:
+          AI makes rural complexity tractable; the countryside keeps AI applied to real people.
+        </p>
+        <p>
+          The longer arc is a question I want to answer with social science and business logic together —
+          <em>can systemic injustice be solved structurally?</em>
+          So my eventual research direction is equity and equality.
+          This site is a slow, ongoing record of that process.
         </p>
       </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="fronts" class="column fronts">
+      <span class="kicker">Two Fronts · Main Lines</span>
+      <h3>AI in one hand, the countryside in the other.</h3>
+      <div class="fronts__grid">
+        <article class="fronts__col">
+          <p class="fronts__hand">Left hand</p>
+          <h4>AI Explorer</h4>
+          <ul>
+            <li>Stay on the frontier; probe the limits of what AI can do</li>
+            <li>Use AI to massively extend one person's reach and impact</li>
+            <li>Make the "super one-person company" a referenceable model</li>
+          </ul>
+        </article>
+        <article class="fronts__col">
+          <p class="fronts__hand">Right hand</p>
+          <h4>Rural Roots</h4>
+          <ul>
+            <li><strong>Rural Notes</strong> — a content vehicle between city and countryside</li>
+            <li><strong>Hills &amp; Seas Youth</strong> — bringing young people back into real rural life</li>
+            <li>Cultural tourism · education nonprofits · industry incubation</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="soul" class="column soul">
+      <span class="kicker">Soul · Three Mottos</span>
+      <h3>How I navigate</h3>
+      <div class="soul__list">
+        <blockquote class="pull-quote">
+          Hold to your own way; do not unsettle the hearts of others.
+          <span class="pull-quote__gloss">A rule for action — be true to yourself, but never trespass on someone else's ground.</span>
+        </blockquote>
+        <blockquote class="pull-quote">
+          Keep company with the bold-hearted; read in the spaces between the words.
+          <span class="pull-quote__gloss">A rule for company and reading — value loyalty and lived experience; the world is the larger book.</span>
+        </blockquote>
+        <blockquote class="pull-quote">
+          Having seen the vastness of heaven and earth, still tender toward each green blade.
+          <span class="pull-quote__gloss">A rule for compassion — even after grasping the whole, stay gentle with every particular.</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="stance" class="column">
+      <span class="kicker">Stance · What I Push Against</span>
+      <h3>What I refuse to normalize</h3>
+      <ol class="stance">
+        <li>
+          <h4>Performative poverty alleviation</h4>
+          <p>
+            Formalism doesn't only waste data. It costs the dignity of the people being served.
+            I use frontline cases to puncture it.
+          </p>
+        </li>
+        <li>
+          <h4>The arrogance of large capital</h4>
+          <p>
+            The casual erasure and systemic extraction of vulnerable groups
+            should not be naturalized as the cost of doing business.
+          </p>
+        </li>
+        <li>
+          <h4>The meaning vacuum among young people</h4>
+          <p>
+            "Lying flat" and nihilism are symptoms, not the problem itself.
+            Science and action can offer a different answer.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="pantheon" class="column">
+      <span class="kicker">Pantheon · Touchstones</span>
+      <h3>People I look up to</h3>
+      <div class="pantheon">
+        <div class="pantheon__group">
+          <p class="pantheon__label">Politics · Social vision</p>
+          <ul>
+            <li><span>Zhou Enlai</span><em>relentless service</em></li>
+            <li><span>Karl Marx</span><em>class insight</em></li>
+            <li><span>Barack Obama</span><em>oratory and change</em></li>
+            <li><span>Zhang Guimei</span><em>the lamp-lighter</em></li>
+          </ul>
+        </div>
+        <div class="pantheon__group">
+          <p class="pantheon__label">Scholarship · Rural roots</p>
+          <ul>
+            <li><span>Fei Xiaotong</span><em>differential mode of association</em></li>
+            <li><span>Shen Congwen</span><em>human grace in the borderlands</em></li>
+          </ul>
+        </div>
+        <div class="pantheon__group">
+          <p class="pantheon__label">Innovation · Action</p>
+          <ul>
+            <li><span>Elon Musk</span><em>first principles</em></li>
+            <li><span>Steve Jobs</span><em>product as Zen</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="knowledge" class="column">
+      <span class="kicker">Method · Knowledge Map</span>
+      <h3>How I think</h3>
+      <p class="dek">
+        Social science as ground, business as bone, complexity science as method,
+        brain science as obsession, the countryside as the field.
+      </p>
+      <ol class="kmap">
+        <li>
+          <span class="kmap__num">01</span>
+          <div>
+            <h4>Social-science foundation</h4>
+            <p>Roughly six years of training in international politics and IR at Fudan University and NYU. Reads reality through institutions, power, social structure, inequality, and globalization.</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">02</span>
+          <div>
+            <h4>Business and management</h4>
+            <p>Coursework across multiple business schools — Peking University Guanghua, Tsinghua PBCSF among them. Frames problems through resource allocation, organizational design, and business models.</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">03</span>
+          <div>
+            <h4>Frontier science</h4>
+            <p>Gaoshan Academy fellow · Shoucheng Zhang Scholar. Currently mapping the last 20 years of Nobel-related advances to assemble a working frame for modern science.</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">04</span>
+          <div>
+            <h4>Complexity &amp; network science</h4>
+            <p>Reads social and scientific problems through systems, networks, feedback loops, nonlinearity, and emergence.</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">05</span>
+          <div>
+            <h4>Motivation &amp; brain science</h4>
+            <p>Long-running question: how does human motivation actually arise? Studies dopamine, habit formation, self-efficacy, cognitive reframing — and applies it to education and personal practice.</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">06</span>
+          <div>
+            <h4>Rural revitalization in the field</h4>
+            <p>Nine years on the ground. Pairs social-science theory with concrete Chinese rural cases to read structural problems and find paths to action.</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">07</span>
+          <div>
+            <h4>Default analytical bias</h4>
+            <p>Systems &gt; individual moralizing · complexity &gt; linear cause · cross-disciplinary &gt; single frame · practice &gt; pure abstraction.</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <hr class="rule" />
@@ -60,13 +252,13 @@ const lang = 'en' as const;
       <ul class="toc">
         <li>
           <span class="toc__num">01</span>
-          <span class="toc__title">Placeholder Project A</span>
-          <span class="toc__dek">A short description, to be replaced with the real piece.</span>
+          <span class="toc__title">Rural Notes</span>
+          <span class="toc__dek">A content vehicle between city and countryside — stories, fieldwork, image.</span>
         </li>
         <li>
           <span class="toc__num">02</span>
-          <span class="toc__title">Placeholder Project B</span>
-          <span class="toc__dek">Another stand-in, here to prove the layout works.</span>
+          <span class="toc__title">Hills &amp; Seas Youth</span>
+          <span class="toc__dek">A youth nonprofit bringing young people back into real rural life.</span>
         </li>
       </ul>
     </section>
@@ -104,9 +296,17 @@ const lang = 'en' as const;
     padding: var(--sp-4) 0 var(--sp-5);
   }
   .masthead__brand .display { margin: 0; }
+  .masthead__sub {
+    margin: var(--sp-1) 0 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--fs-md);
+    color: var(--gray);
+  }
   .masthead__nav {
     display: flex;
     gap: var(--sp-5);
+    flex-wrap: wrap;
     font-family: var(--font-display);
     font-size: var(--fs-base);
   }
@@ -131,6 +331,122 @@ const lang = 'en' as const;
 
   .column { padding: var(--sp-6) 0; }
   .column h3 { margin: 0 0 var(--sp-5); }
+
+  .fronts__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-7);
+    margin-top: var(--sp-5);
+    align-items: start;
+  }
+  .fronts__col h4 { margin: 0 0 var(--sp-3); font-size: var(--fs-lg); }
+  .fronts__col ul { margin: 0; padding-left: 1.1em; line-height: var(--lh-loose); }
+  .fronts__hand {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--tracking-kicker);
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin: 0 0 var(--sp-2);
+  }
+  @media (max-width: 700px) {
+    .fronts__grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+  }
+
+  .soul__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-7);
+    padding: var(--sp-5) 0;
+  }
+
+  .stance {
+    list-style: none;
+    counter-reset: stance;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--sp-5);
+  }
+  .stance li {
+    counter-increment: stance;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: var(--sp-4);
+    padding-bottom: var(--sp-5);
+    border-bottom: 1px solid var(--gray-rule);
+  }
+  .stance li:last-child { border-bottom: none; }
+  .stance li::before {
+    content: counter(stance, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--vermilion);
+    letter-spacing: var(--tracking-wide);
+  }
+  .stance h4 { margin: 0 0 var(--sp-2); font-size: var(--fs-md); }
+  .stance p { margin: 0; max-width: var(--measure); }
+
+  .pantheon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-7);
+    margin-top: var(--sp-4);
+  }
+  .pantheon__label {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--tracking-kicker);
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin: 0 0 var(--sp-3);
+    padding-bottom: var(--sp-2);
+    border-bottom: 1px solid var(--gray-rule);
+  }
+  .pantheon__group ul { list-style: none; padding: 0; margin: 0; line-height: var(--lh-loose); }
+  .pantheon__group li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--sp-3);
+    padding: var(--sp-1) 0;
+    align-items: baseline;
+  }
+  .pantheon__group span {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-base);
+  }
+  .pantheon__group em {
+    font-style: italic;
+    color: var(--gray);
+    font-size: var(--fs-sm);
+    text-align: right;
+  }
+  @media (max-width: 800px) {
+    .pantheon { grid-template-columns: 1fr; gap: var(--sp-5); }
+  }
+
+  .kmap {
+    list-style: none;
+    padding: 0;
+    margin: var(--sp-5) 0 0;
+    border-top: 1px solid var(--gray-rule);
+  }
+  .kmap li {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: var(--sp-4);
+    padding: var(--sp-4) 0;
+    border-bottom: 1px solid var(--gray-rule);
+  }
+  .kmap__num {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--vermilion);
+    letter-spacing: var(--tracking-wide);
+  }
+  .kmap h4 { margin: 0 0 var(--sp-2); font-size: var(--fs-md); }
+  .kmap p { margin: 0; color: var(--ink-soft); max-width: var(--measure); }
 
   .toc {
     list-style: none;

@@ -10,12 +10,16 @@ const lang = 'zh' as const;
     <header class="masthead">
       <div class="masthead__inner">
         <div class="masthead__brand">
-          <span class="kicker">{t(lang, 'meta.issue')} · 2026 年 5 月</span>
+          <span class="kicker">{t(lang, 'meta.issue')} · {t(lang, 'meta.date')}</span>
           <h1 class="display display--mega">{t(lang, 'site.title')}</h1>
+          <p class="masthead__sub">Will Wang</p>
         </div>
         <nav class="masthead__nav">
           <a href="#about">关于</a>
-          <a href="#projects">作品</a>
+          <a href="#fronts">战线</a>
+          <a href="#soul">灵魂</a>
+          <a href="#stance">立场</a>
+          <a href="#pantheon">谱系</a>
           <a href="#contact">联系</a>
           <a href="/en/" class="masthead__lang">EN</a>
         </nav>
@@ -25,10 +29,15 @@ const lang = 'zh' as const;
     <hr class="rule-thick" />
 
     <section class="cover">
-      <span class="kicker">封面专栏 · COVER</span>
-      <h2 class="display">在做事和说事之间，<br />留一个对外的窗。</h2>
-      <p class="dek">这是一份还在编辑中的个人刊物——既是作品索引，也是给"还没定型"留的版面。</p>
-      <p class="byline">主编 · 王星宇 / 排版 · Astro / 字体 · Source Serif &amp; Noto Serif SC</p>
+      <span class="kicker">卷首 · COVER</span>
+      <h2 class="display">已识乾坤大，<br />犹怜草木青。</h2>
+      <p class="dek">
+        9 年乡村振兴一线，AI 先锋，正在路上的社会科学研究者。
+        左手 AI、右手乡土，运营一家"超级一人公司"。
+      </p>
+      <p class="byline">
+        主编 · 汪星宇 / 排版 · Astro / 字体 · Source Serif &amp; Noto Serif SC
+      </p>
     </section>
 
     <hr class="rule" />
@@ -38,15 +47,193 @@ const lang = 'zh' as const;
       <h3>编者按</h3>
       <div class="prose dropcap">
         <p>
-          这一站不是简历，也不只是作品集。设计、产品、商业、还在念书的好奇心同时在跑——
-          所以这里既会贴出已经做完的项目，也会留出一些版面给还没成型的想法。
-          像办一份发刊周期不规律的小杂志，新一期出来的时候你会知道。
+          2017 年第一次走进湘西山坳的时候，我没想到此后九年我会一直把脚步停在这条路上。
+          从纽约的政治学课堂到湖南苗寨的火塘边，从「乡村笔记」到「山海青年」，
+          我做的是一件具体而笨拙的事：让山里的孩子有理由坐下来读书，让城里的年轻人有理由真正走进乡土。
         </p>
         <p>
-          视觉上偏纸面、偏 serif、偏老派阅读。少一点 SaaS 的冷感，多一点编辑部的温度。
-          深浅模式不做——杂志没有 dark mode。
+          2026 年开始，我把自己的形态调成「超级一人公司」。
+          一手把 AI 当作放大器，让一个人的产出可以越过组织的门槛；
+          一手继续在乡土做实活——文旅、教育公益、产业孵化。
+          两条战线不是分裂，而是反馈回路：AI 让乡村工作的复杂度变得可处理，乡土让 AI 的应用回到具体的人。
+        </p>
+        <p>
+          再往远处看，我想用社会科学和商业逻辑回答一个问题——
+          <em>系统性的不公能不能被结构性地解决</em>。
+          所以最终的研究方向是「公平与平等」。
+          这个网站会把过程一段一段记录下来，算是给自己留的一份编年史。
         </p>
       </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="fronts" class="column fronts">
+      <span class="kicker">主线 · TWO FRONTS</span>
+      <h3>左手 AI，右手乡土</h3>
+      <div class="fronts__grid">
+        <article class="fronts__col">
+          <p class="fronts__hand">左手</p>
+          <h4>AI 先锋</h4>
+          <ul>
+            <li>持续追前沿，探索 AI 应用边界</li>
+            <li>用 AI 极大扩展个人行动力与影响力</li>
+            <li>把「超级一人公司」做成一个可被参考的样本</li>
+          </ul>
+        </article>
+        <article class="fronts__col">
+          <p class="fronts__hand">右手</p>
+          <h4>乡土深耕</h4>
+          <ul>
+            <li><strong>乡村笔记</strong>——城乡之间的内容载体</li>
+            <li><strong>山海青年</strong>——把年轻人带回真实的乡土</li>
+            <li>乡村文旅 · 教育公益 · 产业孵化</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="soul" class="column soul">
+      <span class="kicker">灵魂 · SOUL</span>
+      <h3>三则座右铭</h3>
+      <div class="soul__list">
+        <blockquote class="pull-quote">
+          莫舍己道，勿扰他心。
+          <span class="pull-quote__gloss">行动准则——坚持自我，但不侵犯他人。</span>
+        </blockquote>
+        <blockquote class="pull-quote">
+          与有肝胆人共事，于无字句处读书。
+          <span class="pull-quote__gloss">社交与阅读——重实战，重义气，读社会这本大书。</span>
+        </blockquote>
+        <blockquote class="pull-quote">
+          已识乾坤大，犹怜草木青。
+          <span class="pull-quote__gloss">悲悯情怀——看透系统规律，依然对每一个具体的个体保持温柔。</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="stance" class="column">
+      <span class="kicker">立场 · STANCE</span>
+      <h3>我对抗什么</h3>
+      <ol class="stance">
+        <li>
+          <h4>作秀式扶贫</h4>
+          <p>
+            形式主义最伤的不是数据，是被服务者的尊严。
+            我用一线真实案例去戳破它的泡沫。
+          </p>
+        </li>
+        <li>
+          <h4>大公司的傲慢</h4>
+          <p>
+            资本对弱势群体的无视和系统性剥削，不应该被当作运行成本合理化。
+          </p>
+        </li>
+        <li>
+          <h4>年轻人的意义缺失</h4>
+          <p>
+            躺平与虚无是结果，不是问题本身。
+            我想用科学和行动给出另一种回答。
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="pantheon" class="column">
+      <span class="kicker">谱系 · PANTHEON</span>
+      <h3>精神图谱</h3>
+      <div class="pantheon">
+        <div class="pantheon__group">
+          <p class="pantheon__label">政治 · 社会理想</p>
+          <ul>
+            <li><span>周恩来</span><em>鞠躬尽瘁</em></li>
+            <li><span>马克思</span><em>阶级洞察</em></li>
+            <li><span>奥巴马</span><em>演讲与变革</em></li>
+            <li><span>张桂梅</span><em>燃灯者精神</em></li>
+          </ul>
+        </div>
+        <div class="pantheon__group">
+          <p class="pantheon__label">学术 · 乡土底色</p>
+          <ul>
+            <li><span>费孝通</span><em>差序格局 · 乡土中国</em></li>
+            <li><span>沈从文</span><em>边城的人性美</em></li>
+          </ul>
+        </div>
+        <div class="pantheon__group">
+          <p class="pantheon__label">创新 · 行动力</p>
+          <ul>
+            <li><span>马斯克</span><em>第一性原理</em></li>
+            <li><span>乔布斯</span><em>产品的禅意</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="knowledge" class="column">
+      <span class="kicker">方法 · METHOD</span>
+      <h3>知识图谱</h3>
+      <p class="dek">
+        社会科学为底，商业为骨，复杂科学为方法，脑科学为兴趣，乡村实践为现场。
+      </p>
+      <ol class="kmap">
+        <li>
+          <span class="kmap__num">01</span>
+          <div>
+            <h4>社会科学基础</h4>
+            <p>复旦 + 纽约大学，约 6 年国际政治与国际关系训练。从制度、权力、社会结构、不平等与全球化理解现实。</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">02</span>
+          <div>
+            <h4>商业与管理</h4>
+            <p>北大光华、清华五道口等多个商学院课程经历。从资源配置、组织机制、商业模式分析问题。</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">03</span>
+          <div>
+            <h4>科学前沿</h4>
+            <p>高山书院 · 张首晟奖学金获得者。在系统梳理近 20 年诺奖相关进展，建立现代科学知识框架。</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">04</span>
+          <div>
+            <h4>复杂科学 / 网络科学</h4>
+            <p>用系统、网络、反馈回路、非线性、涌现来理解社会与科学问题。</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">05</span>
+          <div>
+            <h4>动力 · 脑科学</h4>
+            <p>长期追问「人的动力如何产生」。关注多巴胺、习惯形成、自我效能、认知重构，并用于教育与个人成长实践。</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">06</span>
+          <div>
+            <h4>乡村振兴现场</h4>
+            <p>九年实践经验。把社会科学理论与中国乡村一线案例结合，分析结构性问题与现实行动路径。</p>
+          </div>
+        </li>
+        <li>
+          <span class="kmap__num">07</span>
+          <div>
+            <h4>默认分析倾向</h4>
+            <p>系统性 &gt; 道德归因 · 复杂性 &gt; 线性因果 · 跨学科 &gt; 单一框架 · 实践 &gt; 纯抽象。</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <hr class="rule" />
@@ -58,13 +245,13 @@ const lang = 'zh' as const;
       <ul class="toc">
         <li>
           <span class="toc__num">01</span>
-          <span class="toc__title">占位项目 A</span>
-          <span class="toc__dek">一段简短的项目说明，会替换为真实内容。</span>
+          <span class="toc__title">乡村笔记</span>
+          <span class="toc__dek">城乡之间的内容载体——故事、田野记录与影像。</span>
         </li>
         <li>
           <span class="toc__num">02</span>
-          <span class="toc__title">占位项目 B</span>
-          <span class="toc__dek">另一段占位说明，先把版式跑通。</span>
+          <span class="toc__title">山海青年</span>
+          <span class="toc__dek">把年轻人带回真实乡土的青年公益项目。</span>
         </li>
       </ul>
     </section>
@@ -102,12 +289,18 @@ const lang = 'zh' as const;
     flex-wrap: wrap;
     padding: var(--sp-4) 0 var(--sp-5);
   }
-  .masthead__brand .display {
-    margin: 0;
+  .masthead__brand .display { margin: 0; }
+  .masthead__sub {
+    margin: var(--sp-1) 0 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--fs-md);
+    color: var(--gray);
   }
   .masthead__nav {
     display: flex;
     gap: var(--sp-5);
+    flex-wrap: wrap;
     font-family: var(--font-display);
     font-size: var(--fs-base);
   }
@@ -132,14 +325,153 @@ const lang = 'zh' as const;
   }
 
   /* Generic column section */
-  .column {
-    padding: var(--sp-6) 0;
+  .column { padding: var(--sp-6) 0; }
+  .column h3 { margin: 0 0 var(--sp-5); }
+
+  /* Two fronts */
+  .fronts__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-7);
+    margin-top: var(--sp-5);
+    align-items: start;
   }
-  .column h3 {
-    margin: 0 0 var(--sp-5);
+  .fronts__col h4 {
+    margin: 0 0 var(--sp-3);
+    font-size: var(--fs-lg);
+  }
+  .fronts__col ul {
+    margin: 0;
+    padding-left: 1.1em;
+    line-height: var(--lh-loose);
+  }
+  .fronts__hand {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--tracking-kicker);
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin: 0 0 var(--sp-2);
+  }
+  @media (max-width: 700px) {
+    .fronts__grid {
+      grid-template-columns: 1fr;
+      gap: var(--sp-6);
+    }
   }
 
-  /* Table of contents — magazine style */
+  /* Soul — three pull quotes */
+  .soul__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-7);
+    padding: var(--sp-5) 0;
+  }
+
+  /* Stance — numbered list */
+  .stance {
+    list-style: none;
+    counter-reset: stance;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--sp-5);
+  }
+  .stance li {
+    counter-increment: stance;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: var(--sp-4);
+    padding-bottom: var(--sp-5);
+    border-bottom: 1px solid var(--gray-rule);
+  }
+  .stance li:last-child { border-bottom: none; }
+  .stance li::before {
+    content: counter(stance, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--vermilion);
+    letter-spacing: var(--tracking-wide);
+  }
+  .stance h4 { margin: 0 0 var(--sp-2); font-size: var(--fs-md); }
+  .stance p { margin: 0; max-width: var(--measure); }
+
+  /* Pantheon — three columns of figures */
+  .pantheon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-7);
+    margin-top: var(--sp-4);
+  }
+  .pantheon__label {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--tracking-kicker);
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin: 0 0 var(--sp-3);
+    padding-bottom: var(--sp-2);
+    border-bottom: 1px solid var(--gray-rule);
+  }
+  .pantheon__group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: var(--lh-loose);
+  }
+  .pantheon__group li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--sp-3);
+    padding: var(--sp-1) 0;
+    align-items: baseline;
+  }
+  .pantheon__group span {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-base);
+  }
+  .pantheon__group em {
+    font-style: italic;
+    color: var(--gray);
+    font-size: var(--fs-sm);
+    text-align: right;
+  }
+  @media (max-width: 800px) {
+    .pantheon { grid-template-columns: 1fr; gap: var(--sp-5); }
+  }
+
+  /* Knowledge map — numbered ordered list */
+  .kmap {
+    list-style: none;
+    padding: 0;
+    margin: var(--sp-5) 0 0;
+    border-top: 1px solid var(--gray-rule);
+  }
+  .kmap li {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: var(--sp-4);
+    padding: var(--sp-4) 0;
+    border-bottom: 1px solid var(--gray-rule);
+  }
+  .kmap__num {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--vermilion);
+    letter-spacing: var(--tracking-wide);
+  }
+  .kmap h4 {
+    margin: 0 0 var(--sp-2);
+    font-size: var(--fs-md);
+  }
+  .kmap p {
+    margin: 0;
+    color: var(--ink-soft);
+    max-width: var(--measure);
+  }
+
+  /* Table of contents */
   .toc {
     list-style: none;
     padding: 0;
@@ -172,13 +504,8 @@ const lang = 'zh' as const;
     font-size: var(--fs-base);
   }
   @media (max-width: 640px) {
-    .toc li {
-      grid-template-columns: 2.5rem 1fr;
-    }
-    .toc__dek {
-      grid-column: 2;
-      margin-top: var(--sp-1);
-    }
+    .toc li { grid-template-columns: 2.5rem 1fr; }
+    .toc__dek { grid-column: 2; margin-top: var(--sp-1); }
   }
 
   .footer {
