@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+import { getLangFromUrl } from '../i18n/utils';
+import { t } from '../i18n/ui';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const fullTitle = title ?? t(lang, 'site.title');
+const fullDesc = description ?? t(lang, 'site.tagline');
+---
+
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={fullDesc} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

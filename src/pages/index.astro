@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n/ui';
+
+const lang = 'zh' as const;
+---
+
+<BaseLayout>
+  <main style="max-width: 36rem; margin: 6rem auto; padding: 0 1.5rem;">
+    <p style="font-variant: small-caps; letter-spacing: 0.08em; color: #b03a2e; margin: 0 0 0.5rem;">
+      {t(lang, 'meta.issue')}
+    </p>
+    <h1 style="font-size: 3rem; line-height: 1.1; margin: 0 0 1rem; font-weight: 700;">
+      {t(lang, 'site.title')}
+    </h1>
+    <p style="font-size: 1.125rem; color: #555; margin: 0 0 2rem;">
+      {t(lang, 'site.tagline')}
+    </p>
+    <p style="margin: 0;">
+      建设中。详细排版与内容将在后续阶段填充。 ·
+      <a href="/en/">English</a>
+    </p>
+  </main>
+</BaseLayout>

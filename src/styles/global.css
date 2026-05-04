@@ -1,0 +1,37 @@
+/* Minimal reset + paper-feel base. Typography system comes in Stage 2. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: ui-serif, Georgia, "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  background: #f4efe6;
+  color: #1a1a1a;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #b03a2e;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #1a1a1a;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
