@@ -1,0 +1,74 @@
+/* Design tokens — editorial / magazine feel.
+   Adjust here to retune the whole site. */
+
+:root {
+  /* Color palette — paper, ink, ochre, vermilion */
+  --paper: #f4efe6;        /* warm cream paper */
+  --paper-deep: #ebe4d6;   /* one shade darker for rules and tints */
+  --ink: #1a1a1a;          /* primary ink */
+  --ink-soft: #3a3530;     /* secondary ink */
+  --gray: #6b6660;         /* muted captions, meta */
+  --gray-rule: #c9c0af;    /* hairline rules */
+  --vermilion: #b03a2e;    /* accent — kickers, links */
+  --vermilion-deep: #8a2d23;
+
+  /* Typography stacks */
+  --font-serif-en: "Source Serif 4 Variable", "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-serif-zh: "Noto Serif SC", "Source Han Serif SC", "Songti SC", STSong, serif;
+  --font-serif: var(--font-serif-en), var(--font-serif-zh);
+  --font-display: "EB Garamond", var(--font-serif-en), var(--font-serif-zh);
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale — modular, ratio ≈ 1.250 (major third) */
+  --fs-xs:    0.75rem;     /* 12 — meta, byline */
+  --fs-sm:    0.875rem;    /* 14 — small */
+  --fs-base:  1.0625rem;   /* 17 — body, slightly larger for serif legibility */
+  --fs-md:    1.1875rem;   /* 19 — lead */
+  --fs-lg:    1.5rem;      /* 24 — h3 */
+  --fs-xl:    2rem;        /* 32 — h2 */
+  --fs-2xl:   2.75rem;     /* 44 — h1 */
+  --fs-3xl:   4rem;        /* 64 — display, cover headline */
+  --fs-4xl:   5.5rem;      /* 88 — hero, masthead */
+
+  /* Line heights */
+  --lh-tight: 1.05;
+  --lh-snug:  1.2;
+  --lh-base:  1.6;
+  --lh-loose: 1.75;
+
+  /* Measure (text column width) */
+  --measure-narrow: 28rem;  /* meta columns */
+  --measure: 36rem;          /* body, ~ 65–70 char */
+  --measure-wide: 48rem;     /* lead paragraphs */
+
+  /* Spacing scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  /* Layout */
+  --page-max: 76rem;
+  --gutter: 1.5rem;
+
+  /* Letter-spacing */
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-kicker: 0.14em;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-2xl: 3.25rem;
+    --fs-3xl: 5rem;
+    --fs-4xl: 7rem;
+    --gutter: 2rem;
+  }
+}

@@ -1,4 +1,5 @@
-/* Minimal reset + paper-feel base. Typography system comes in Stage 2. */
+/* Reset and global skin. Body typography lives in typography.css. */
+
 *,
 *::before,
 *::after {
@@ -11,27 +12,41 @@ body {
   padding: 0;
 }
 
-body {
-  font-family: ui-serif, Georgia, "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
-  background: #f4efe6;
-  color: #1a1a1a;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
 }
 
 a {
-  color: #b03a2e;
+  color: var(--vermilion);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
+  transition: color 0.15s ease;
 }
 
 a:hover {
-  color: #1a1a1a;
+  color: var(--ink);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/* Selection */
+::selection {
+  background: var(--vermilion);
+  color: var(--paper);
 }

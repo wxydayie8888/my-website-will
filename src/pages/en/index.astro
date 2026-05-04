@@ -6,19 +6,171 @@ const lang = 'en' as const;
 ---
 
 <BaseLayout>
-  <main style="max-width: 36rem; margin: 6rem auto; padding: 0 1.5rem;">
-    <p style="font-variant: small-caps; letter-spacing: 0.08em; color: #b03a2e; margin: 0 0 0.5rem;">
-      {t(lang, 'meta.issue')}
-    </p>
-    <h1 style="font-size: 3rem; line-height: 1.1; margin: 0 0 1rem; font-weight: 700;">
-      {t(lang, 'site.title')}
-    </h1>
-    <p style="font-size: 1.125rem; color: #555; margin: 0 0 2rem;">
-      {t(lang, 'site.tagline')}
-    </p>
-    <p style="margin: 0;">
-      Under construction. Editorial typography lands in stage 2. ·
-      <a href="/">中文</a>
-    </p>
-  </main>
+  <div class="page">
+    <header class="masthead">
+      <div class="masthead__inner">
+        <div class="masthead__brand">
+          <span class="kicker">{t(lang, 'meta.issue')} · May 2026</span>
+          <h1 class="display display--mega">{t(lang, 'site.title')}</h1>
+        </div>
+        <nav class="masthead__nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="/" class="masthead__lang">中文</a>
+        </nav>
+      </div>
+    </header>
+
+    <hr class="rule-thick" />
+
+    <section class="cover">
+      <span class="kicker">Cover · This Issue</span>
+      <h2 class="display">A window between making things<br />and talking about them.</h2>
+      <p class="dek">A still-in-edit personal periodical — part portfolio, part room for the unfinished.</p>
+      <p class="byline">Editor · Wang Xingyu / Set in Astro / Type · Source Serif &amp; Noto Serif SC</p>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="about" class="column">
+      <span class="kicker">About · Column</span>
+      <h3>Editor's note</h3>
+      <div class="prose dropcap">
+        <p>
+          This isn't a résumé and it isn't strictly a portfolio. Design, product, business,
+          and the curiosity of someone still in school all run at once — so the site has
+          space for finished projects and for ideas that haven't taken shape yet.
+          Think of it as a small magazine on an irregular publication schedule;
+          you'll know when a new issue is out.
+        </p>
+        <p>
+          Visually it leans paper, serif, and old-school reading. Less SaaS chill,
+          more newsroom warmth. No dark mode — magazines don't have one.
+        </p>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="projects" class="column">
+      <span class="kicker">Contents · This Issue</span>
+      <h3>Selected Works</h3>
+      <p class="dek">Project detail pages arrive in the next stage. Below is placeholder.</p>
+      <ul class="toc">
+        <li>
+          <span class="toc__num">01</span>
+          <span class="toc__title">Placeholder Project A</span>
+          <span class="toc__dek">A short description, to be replaced with the real piece.</span>
+        </li>
+        <li>
+          <span class="toc__num">02</span>
+          <span class="toc__title">Placeholder Project B</span>
+          <span class="toc__dek">Another stand-in, here to prove the layout works.</span>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="contact" class="column">
+      <span class="kicker">Mast · Colophon</span>
+      <h3>Contact</h3>
+      <p>
+        Email: <a href="mailto:wangxingyu.will@gmail.com">wangxingyu.will@gmail.com</a><br />
+        GitHub: <a href="https://github.com/wxydayie8888" target="_blank" rel="noopener">@wxydayie8888</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p class="byline">{t(lang, 'footer.colophon')}</p>
+    </footer>
+  </div>
 </BaseLayout>
+
+<style>
+  .page {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--sp-6) var(--gutter) var(--sp-9);
+  }
+
+  .masthead__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--sp-5);
+    flex-wrap: wrap;
+    padding: var(--sp-4) 0 var(--sp-5);
+  }
+  .masthead__brand .display { margin: 0; }
+  .masthead__nav {
+    display: flex;
+    gap: var(--sp-5);
+    font-family: var(--font-display);
+    font-size: var(--fs-base);
+  }
+  .masthead__nav a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .masthead__nav a:hover {
+    border-bottom-color: var(--vermilion);
+    color: var(--vermilion);
+  }
+  .masthead__lang {
+    font-variant: small-caps;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .cover {
+    padding: var(--sp-8) 0 var(--sp-7);
+    max-width: 56rem;
+  }
+
+  .column { padding: var(--sp-6) 0; }
+  .column h3 { margin: 0 0 var(--sp-5); }
+
+  .toc {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--gray-rule);
+  }
+  .toc li {
+    display: grid;
+    grid-template-columns: 3rem 1fr 2fr;
+    align-items: baseline;
+    gap: var(--sp-4);
+    padding: var(--sp-4) 0;
+    border-bottom: 1px solid var(--gray-rule);
+  }
+  .toc__num {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--vermilion);
+    letter-spacing: var(--tracking-wide);
+  }
+  .toc__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-md);
+  }
+  .toc__dek {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: var(--fs-base);
+  }
+  @media (max-width: 640px) {
+    .toc li { grid-template-columns: 2.5rem 1fr; }
+    .toc__dek { grid-column: 2; margin-top: var(--sp-1); }
+  }
+
+  .footer {
+    margin-top: var(--sp-9);
+    padding-top: var(--sp-5);
+    border-top: 1px solid var(--gray-rule);
+  }
+</style>

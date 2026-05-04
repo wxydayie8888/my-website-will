@@ -6,19 +6,184 @@ const lang = 'zh' as const;
 ---
 
 <BaseLayout>
-  <main style="max-width: 36rem; margin: 6rem auto; padding: 0 1.5rem;">
-    <p style="font-variant: small-caps; letter-spacing: 0.08em; color: #b03a2e; margin: 0 0 0.5rem;">
-      {t(lang, 'meta.issue')}
-    </p>
-    <h1 style="font-size: 3rem; line-height: 1.1; margin: 0 0 1rem; font-weight: 700;">
-      {t(lang, 'site.title')}
-    </h1>
-    <p style="font-size: 1.125rem; color: #555; margin: 0 0 2rem;">
-      {t(lang, 'site.tagline')}
-    </p>
-    <p style="margin: 0;">
-      建设中。详细排版与内容将在后续阶段填充。 ·
-      <a href="/en/">English</a>
-    </p>
-  </main>
+  <div class="page">
+    <header class="masthead">
+      <div class="masthead__inner">
+        <div class="masthead__brand">
+          <span class="kicker">{t(lang, 'meta.issue')} · 2026 年 5 月</span>
+          <h1 class="display display--mega">{t(lang, 'site.title')}</h1>
+        </div>
+        <nav class="masthead__nav">
+          <a href="#about">关于</a>
+          <a href="#projects">作品</a>
+          <a href="#contact">联系</a>
+          <a href="/en/" class="masthead__lang">EN</a>
+        </nav>
+      </div>
+    </header>
+
+    <hr class="rule-thick" />
+
+    <section class="cover">
+      <span class="kicker">封面专栏 · COVER</span>
+      <h2 class="display">在做事和说事之间，<br />留一个对外的窗。</h2>
+      <p class="dek">这是一份还在编辑中的个人刊物——既是作品索引，也是给"还没定型"留的版面。</p>
+      <p class="byline">主编 · 王星宇 / 排版 · Astro / 字体 · Source Serif &amp; Noto Serif SC</p>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="about" class="column">
+      <span class="kicker">关于 · COLUMN</span>
+      <h3>编者按</h3>
+      <div class="prose dropcap">
+        <p>
+          这一站不是简历，也不只是作品集。设计、产品、商业、还在念书的好奇心同时在跑——
+          所以这里既会贴出已经做完的项目，也会留出一些版面给还没成型的想法。
+          像办一份发刊周期不规律的小杂志，新一期出来的时候你会知道。
+        </p>
+        <p>
+          视觉上偏纸面、偏 serif、偏老派阅读。少一点 SaaS 的冷感，多一点编辑部的温度。
+          深浅模式不做——杂志没有 dark mode。
+        </p>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="projects" class="column">
+      <span class="kicker">本期目录 · CONTENTS</span>
+      <h3>作品索引</h3>
+      <p class="dek">作品详情页将在下一阶段上线。当前为占位。</p>
+      <ul class="toc">
+        <li>
+          <span class="toc__num">01</span>
+          <span class="toc__title">占位项目 A</span>
+          <span class="toc__dek">一段简短的项目说明，会替换为真实内容。</span>
+        </li>
+        <li>
+          <span class="toc__num">02</span>
+          <span class="toc__title">占位项目 B</span>
+          <span class="toc__dek">另一段占位说明，先把版式跑通。</span>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="rule" />
+
+    <section id="contact" class="column">
+      <span class="kicker">通讯 · COLOPHON</span>
+      <h3>联系</h3>
+      <p>
+        邮箱：<a href="mailto:wangxingyu.will@gmail.com">wangxingyu.will@gmail.com</a><br />
+        GitHub：<a href="https://github.com/wxydayie8888" target="_blank" rel="noopener">@wxydayie8888</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p class="byline">{t(lang, 'footer.colophon')}</p>
+    </footer>
+  </div>
 </BaseLayout>
+
+<style>
+  .page {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--sp-6) var(--gutter) var(--sp-9);
+  }
+
+  /* Masthead */
+  .masthead__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--sp-5);
+    flex-wrap: wrap;
+    padding: var(--sp-4) 0 var(--sp-5);
+  }
+  .masthead__brand .display {
+    margin: 0;
+  }
+  .masthead__nav {
+    display: flex;
+    gap: var(--sp-5);
+    font-family: var(--font-display);
+    font-size: var(--fs-base);
+  }
+  .masthead__nav a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .masthead__nav a:hover {
+    border-bottom-color: var(--vermilion);
+    color: var(--vermilion);
+  }
+  .masthead__lang {
+    font-variant: small-caps;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  /* Cover section */
+  .cover {
+    padding: var(--sp-8) 0 var(--sp-7);
+    max-width: 56rem;
+  }
+
+  /* Generic column section */
+  .column {
+    padding: var(--sp-6) 0;
+  }
+  .column h3 {
+    margin: 0 0 var(--sp-5);
+  }
+
+  /* Table of contents — magazine style */
+  .toc {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--gray-rule);
+  }
+  .toc li {
+    display: grid;
+    grid-template-columns: 3rem 1fr 2fr;
+    align-items: baseline;
+    gap: var(--sp-4);
+    padding: var(--sp-4) 0;
+    border-bottom: 1px solid var(--gray-rule);
+  }
+  .toc__num {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--vermilion);
+    letter-spacing: var(--tracking-wide);
+  }
+  .toc__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-md);
+  }
+  .toc__dek {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: var(--fs-base);
+  }
+  @media (max-width: 640px) {
+    .toc li {
+      grid-template-columns: 2.5rem 1fr;
+    }
+    .toc__dek {
+      grid-column: 2;
+      margin-top: var(--sp-1);
+    }
+  }
+
+  .footer {
+    margin-top: var(--sp-9);
+    padding-top: var(--sp-5);
+    border-top: 1px solid var(--gray-rule);
+  }
+</style>

@@ -1,5 +1,8 @@
 ---
+import '../styles/fonts';
+import '../styles/tokens.css';
 import '../styles/global.css';
+import '../styles/typography.css';
 import { getLangFromUrl } from '../i18n/utils';
 import { t } from '../i18n/ui';
 
@@ -10,7 +13,8 @@ interface Props {
 
 const { title, description } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
-const fullTitle = title ?? t(lang, 'site.title');
+const siteName = t(lang, 'site.title');
+const fullTitle = title ? `${title} — ${siteName}` : siteName;
 const fullDesc = description ?? t(lang, 'site.tagline');
 ---
 
@@ -23,6 +27,10 @@ const fullDesc = description ?? t(lang, 'site.tagline');
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{fullTitle}</title>
     <meta name="description" content={fullDesc} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={fullDesc} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
   </head>
   <body>
     <slot />

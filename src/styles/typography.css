@@ -1,0 +1,160 @@
+/* Editorial typography — headlines, body, kicker, dek, byline, drop-cap. */
+
+body {
+  font-family: var(--font-serif);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  color: var(--ink);
+  background: var(--paper);
+  font-feature-settings: "kern", "liga", "calt", "onum";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings — display weight, tight tracking */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  margin: 0 0 var(--sp-4);
+  color: var(--ink);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-2xl); line-height: var(--lh-tight); }
+h2 { font-size: var(--fs-xl);  line-height: var(--lh-snug); }
+h3 { font-size: var(--fs-lg);  line-height: var(--lh-snug); }
+h4 { font-size: var(--fs-md);  line-height: var(--lh-snug); }
+
+p {
+  margin: 0 0 var(--sp-4);
+  max-width: var(--measure);
+  text-wrap: pretty;
+  hyphens: auto;
+}
+
+/* Body lead — first paragraph after a heading sometimes */
+.lead {
+  font-size: var(--fs-md);
+  line-height: var(--lh-loose);
+  color: var(--ink-soft);
+  max-width: var(--measure-wide);
+}
+
+/* Kicker — small caps eyebrow above a headline */
+.kicker {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--vermilion);
+  margin-bottom: var(--sp-3);
+}
+
+/* Dek — italic subtitle below a headline */
+.dek {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-md);
+  line-height: var(--lh-snug);
+  color: var(--ink-soft);
+  max-width: var(--measure-wide);
+  margin: 0 0 var(--sp-5);
+  font-weight: 400;
+}
+
+/* Byline — mono small caps */
+.byline {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--gray);
+  margin: 0 0 var(--sp-5);
+}
+
+.byline a { color: inherit; }
+
+/* Hairline divider — like a magazine column rule */
+.rule {
+  border: 0;
+  border-top: 1px solid var(--gray-rule);
+  margin: var(--sp-7) 0;
+}
+
+.rule-thick {
+  border-top: 3px double var(--ink);
+  margin: var(--sp-7) 0;
+}
+
+/* Display headline — for cover-style pieces (hero, masthead) */
+.display {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--sp-4);
+}
+
+.display--mega {
+  font-size: var(--fs-4xl);
+}
+
+/* Drop cap — first letter of a section, magazine-style */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 4.5em;
+  line-height: 0.9;
+  float: left;
+  margin: 0.05em 0.08em 0 0;
+  color: var(--vermilion);
+}
+
+/* Small caps utility */
+.smallcaps {
+  font-variant: all-small-caps;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Links inside prose */
+.prose a {
+  color: var(--vermilion);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.prose a:hover {
+  color: var(--ink);
+}
+
+/* Prose container — body text styling for long-form content */
+.prose {
+  max-width: var(--measure);
+  font-size: var(--fs-base);
+  line-height: var(--lh-loose);
+}
+
+.prose p { max-width: 100%; }
+.prose h2 { margin-top: var(--sp-7); }
+.prose h3 { margin-top: var(--sp-6); }
+.prose blockquote {
+  margin: var(--sp-5) 0;
+  padding-left: var(--sp-5);
+  border-left: 3px solid var(--vermilion);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.prose figure { margin: var(--sp-6) 0; }
+.prose figcaption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--gray);
+  text-align: center;
+  margin-top: var(--sp-2);
+}
